@@ -4,4 +4,6 @@ title: About Me
 permalink: /about/
 ---
 
-![Cycling Kit](images/cyling_profile_pic.jpg)
+![](images/cyling_profile_pic.jpg)
+![]({{ wkthompson.com }}/images/cyling_profile_pic.jpg "Cycling Profile")
+
