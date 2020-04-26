@@ -5,5 +5,5 @@ permalink: /about/
 ---
 
 ![](images/cyling_profile_pic.jpg)
-![]({{ wkthompson.com }}/images/cyling-profile.jpg "VCR Kit")
+![]({{ wkthompson.com }}/images/cycling-profile.jpg "VCR Kit")
 
