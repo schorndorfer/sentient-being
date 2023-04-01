@@ -6,8 +6,8 @@ root: intro
 chapters:
 - file: nlp
 - file: python
-- file: coffee
-- file: whiskey
-- file: cycling
+#- file: coffee
+#- file: whiskey
+#- file: cycling
 #- file: notebooks
 #- file: markdown-notebooks
