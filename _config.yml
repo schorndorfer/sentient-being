@@ -2,8 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Notes from a Sentient Being
-author: WKT
+author: Will Thompson
 logo: octopus.jpg
+copyright: 2023
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
