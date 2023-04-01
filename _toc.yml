@@ -4,6 +4,10 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
+- file: nlp
+- file: python
+- file: coffee
+- file: whiskey
+- file: cycling
 #- file: notebooks
 #- file: markdown-notebooks

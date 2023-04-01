@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Sentient Being
-author: Will Thompson
+title: Notes from a Sentient Being
+author: WKT
 logo: octopus.jpg
 
 # Force re-execution of notebooks on each build.
