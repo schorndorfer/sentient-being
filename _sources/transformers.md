@@ -11,32 +11,33 @@ kernelspec:
   language: python
   name: python3
 ---
-
-# Transformers
-
-
-## An example cell
-
-With MyST Markdown, you can define code cells with a directive like so:
-
-```{code-cell}
-print(2 + 2)
-```
-
-Here is a [reference to the intro](intro.md). Here is a reference to [](section-label).
+# Learning Transformers
 
 (section-label)=
-## Reading List
+## Mathematical Foundations
+- {cite}`marc_peter_deisenroth_mathematics_2020`
+- {cite}`kevin_murphy_probabilistic_2022`
+- {cite}`kevin_murphy_probabilistic_2023`
 
-You can also cite references that are stored in a `bibtex` file. For example,
-the following syntax: ``{cite}`noauthor_mathematics_nodate-1` `` will render like
-this: {cite}`noauthor_mathematics_nodate-1`.
 
-Moreover, you can insert a bibliography into your page with this syntax:
-The `{bibliography}` directive must be used for all the `{cite}` roles to
-render properly.
-For example, if the references for your book are stored in `references.bib`,
-then the bibliography is inserted with:
+(section-label)=
+## Neural Networks (General)
+
+- [Neural Networks from Zero to Hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+- {cite}`zhang_dive_2023`
+
+
+(section-label)=
+## Transformers
+
+- {cite}`vaswani_attention_2017`
+- [The Annotated Transformer](http://nlp.seas.harvard.edu/annotated-transformer/)
+- [Transformers from Scratch](https://e2eml.school/transformers.html/)
+- {cite}`phuong_formal_2022`
+- {cite}`tunstall_natural_2022`
+
+(section-label)=
+## Bibliography
 
 ```{bibliography}
 ```

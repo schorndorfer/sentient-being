@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Transformers &#8212; Notes from a Sentient Being</title>
+    <title>Learning Transformers &#8212; Notes from a Sentient Being</title>
   
   
   
@@ -157,8 +157,9 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="nlp.html">NLP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="llms-for-programming.html">Large Language Models for Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="multiprocessing.html">Multiprocessing</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Transformers</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Learning Transformers</a></li>
 </ul>
 
     </div>
@@ -342,7 +343,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Transformers</h1>
+    <h1>Learning Transformers</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -352,8 +353,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-list">Reading List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-foundations">Mathematical Foundations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neural-networks-general">Neural Networks (General)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformers">Transformers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
 </ul>
             </nav>
         </div>
@@ -365,39 +368,57 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="transformers">
-<h1>Transformers<a class="headerlink" href="#transformers" title="Permalink to this headline">#</a></h1>
-<section id="an-example-cell">
-<h2>An example cell<a class="headerlink" href="#an-example-cell" title="Permalink to this headline">#</a></h2>
-<p>With MyST Markdown, you can define code cells with a directive like so:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<p>Here is a <a class="reference internal" href="intro.html"><span class="doc std std-doc">reference to the intro</span></a>. Here is a reference to <a class="reference internal" href="#section-label"><span class="std std-ref">Reading List</span></a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="learning-transformers">
+<h1>Learning Transformers<a class="headerlink" href="#learning-transformers" title="Permalink to this headline">#</a></h1>
+<section id="mathematical-foundations">
+<span id="section-label"></span><h2>Mathematical Foundations<a class="headerlink" href="#mathematical-foundations" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="#id12" title="Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong. Mathematics for Machine Learning. Cambridge University Press, 2020. URL: https://github.com/mml-book/mml-book.github.io.">MarcPDeisenrothAAFaisalChengSOng20</a>]</span></p></li>
+<li><p><span id="id2">[<a class="reference internal" href="#id15" title="Kevin Murphy. Probabilistic Machine Learning: An Introduction. MIT Press, 2022. URL: https://probml.github.io/pml-book/book1.html.">KevinMurphy22</a>]</span></p></li>
+<li><p><span id="id3">[<a class="reference internal" href="#id16" title="Kevin Murphy. Probabilistic Machine Learning: Advanced Topics. MIT Press, 2023. URL: https://probml.github.io/pml-book/book2.html.">KevinMurphy23</a>]</span></p></li>
+</ul>
 </section>
-<section id="reading-list">
-<span id="section-label"></span><h2>Reading List<a class="headerlink" href="#reading-list" title="Permalink to this headline">#</a></h2>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`noauthor_mathematics_nodate-1`</span> </code> will render like
-this: <span id="id1">[<a class="reference internal" href="#id5" title="Mathematics for Machine Learning. URL: https://github.com/mml-book/mml-book.github.io.">noa</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
-<div class="docutils container" id="id2">
+<section id="neural-networks-general">
+<span id="id4"></span><h2>Neural Networks (General)<a class="headerlink" href="#neural-networks-general" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ">Neural Networks from Zero to Hero</a></p></li>
+<li><p><span id="id5">[<a class="reference internal" href="#id18" title="Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola. Dive into Deep Learning. February 2023. arXiv:2106.11342 [cs]. URL: http://arxiv.org/abs/2106.11342 (visited on 2023-04-09).">ZLLS23</a>]</span></p></li>
+</ul>
+</section>
+<section id="transformers">
+<span id="id6"></span><h2>Transformers<a class="headerlink" href="#transformers" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><span id="id7">[<a class="reference internal" href="#id14" title="Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention Is All You Need. December 2017. arXiv:1706.03762 [cs]. URL: http://arxiv.org/abs/1706.03762 (visited on 2023-01-25).">VSP+17</a>]</span></p></li>
+<li><p><a class="reference external" href="http://nlp.seas.harvard.edu/annotated-transformer/">The Annotated Transformer</a></p></li>
+<li><p><a class="reference external" href="https://e2eml.school/transformers.html/">Transformers from Scratch</a></p></li>
+<li><p><span id="id8">[<a class="reference internal" href="#id17" title="Mary Phuong and Marcus Hutter. Formal Algorithms for Transformers. July 2022. arXiv:2207.09238 [cs]. URL: http://arxiv.org/abs/2207.09238 (visited on 2023-04-09).">PH22</a>]</span></p></li>
+<li><p><span id="id9">[<a class="reference internal" href="#id13" title="Lewis Tunstall, Leandro von Werra, Thomas Wolf, and Aurélien Géron. Natural language processing with transformers: building language applications with hugging face. O'Reilly, Sebastopol, revised edition edition, 2022. ISBN 978-1-09-813679-6. URL: https://learning.oreilly.com/library/view/natural-language-processing/9781098136789/.">TWWG22</a>]</span></p></li>
+</ul>
+</section>
+<section id="bibliography">
+<span id="id10"></span><h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id11">
 <dl class="citation">
-<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">noa</a></span></dt>
-<dd><p>Mathematics for Machine Learning. URL: <a class="github reference external" href="https://github.com/mml-book/mml-book.github.io">mml-book/mml-book.github.io</a>.</p>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id8">PH22</a></span></dt>
+<dd><p>Mary Phuong and Marcus Hutter. Formal Algorithms for Transformers. July 2022. arXiv:2207.09238 [cs]. URL: <a class="reference external" href="http://arxiv.org/abs/2207.09238">http://arxiv.org/abs/2207.09238</a> (visited on 2023-04-09).</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id9">TWWG22</a></span></dt>
+<dd><p>Lewis Tunstall, Leandro von Werra, Thomas Wolf, and Aurélien Géron. <em>Natural language processing with transformers: building language applications with hugging face</em>. O'Reilly, Sebastopol, revised edition edition, 2022. ISBN 978-1-09-813679-6. URL: <a class="reference external" href="https://learning.oreilly.com/library/view/natural-language-processing/9781098136789/">https://learning.oreilly.com/library/view/natural-language-processing/9781098136789/</a>.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id7">VSP+17</a></span></dt>
+<dd><p>Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention Is All You Need. December 2017. arXiv:1706.03762 [cs]. URL: <a class="reference external" href="http://arxiv.org/abs/1706.03762">http://arxiv.org/abs/1706.03762</a> (visited on 2023-01-25).</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id5">ZLLS23</a></span></dt>
+<dd><p>Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola. Dive into Deep Learning. February 2023. arXiv:2106.11342 [cs]. URL: <a class="reference external" href="http://arxiv.org/abs/2106.11342">http://arxiv.org/abs/2106.11342</a> (visited on 2023-04-09).</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id2">KevinMurphy22</a></span></dt>
+<dd><p>Kevin Murphy. <em>Probabilistic Machine Learning: An Introduction</em>. MIT Press, 2022. URL: <a class="reference external" href="https://probml.github.io/pml-book/book1.html">https://probml.github.io/pml-book/book1.html</a>.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id3">KevinMurphy23</a></span></dt>
+<dd><p>Kevin Murphy. <em>Probabilistic Machine Learning: Advanced Topics</em>. MIT Press, 2023. URL: <a class="reference external" href="https://probml.github.io/pml-book/book2.html">https://probml.github.io/pml-book/book2.html</a>.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id1">MarcPDeisenrothAAFaisalChengSOng20</a></span></dt>
+<dd><p>Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong. <em>Mathematics for Machine Learning</em>. Cambridge University Press, 2020. URL: <a class="github reference external" href="https://github.com/mml-book/mml-book.github.io">mml-book/mml-book.github.io</a>.</p>
 </dd>
 </dl>
 </div>
@@ -462,8 +483,10 @@ then the bibliography is inserted with:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-list">Reading List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-foundations">Mathematical Foundations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neural-networks-general">Neural Networks (General)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformers">Transformers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
 </ul>
   </nav></div>
 
