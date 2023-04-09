@@ -4,7 +4,11 @@
 title: Notes from a Sentient Being
 author: Will Thompson
 logo: octopus.jpg
-copyright: 2023
+copyright: '2023'
+
+#sphinx:
+#  config:
+#    bibtex_reference_style: author_year
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
