@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../manuscripts/WKT-CV"
+		},
+		{
+			"path": "../../kellogg/krs-llm-cookbook"
+		}
+	],
+	"settings": {}
+}

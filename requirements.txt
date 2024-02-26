@@ -1,4 +1,4 @@
 jupyter-book
 jupyterlab
 seaborn
-pandas
+polars[all]

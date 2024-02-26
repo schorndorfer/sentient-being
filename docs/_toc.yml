@@ -4,11 +4,14 @@
 format: jb-book
 root: intro
 chapters:
-- file: nlp
-- file: python
-- file: llms-for-programming
-- file: multiprocessing
-- file: transformers
+- file: arxiv-dataset
+- file: llamachain
+- file: dspy
+# - file: nlp
+# - file: python
+# - file: llms-for-programming
+# - file: multiprocessing
+# - file: transformers
 #- file: coffee
 #- file: whiskey
 #- file: cycling
