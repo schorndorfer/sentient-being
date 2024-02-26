@@ -1,5 +1,7 @@
 # arXiv Dataset
 
+## Download Data
+
 Metadata download [here](https://www.kaggle.com/datasets/Cornell-University/arxiv?resource=download)
 
 
@@ -14,4 +16,9 @@ For more targeted downloads, you can pick a specific [topic](https://arxiv.org/c
 ```bash
 gsutil -m cp -r gs://arxiv-dataset/arxiv/cs/ .
 ```
+
+## Preprocess
+- Convert to parquet
+- Filter to subset
+- Extract text
 
