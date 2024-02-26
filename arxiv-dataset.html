@@ -393,14 +393,12 @@ document.write(`
 <section id="download-data">
 <h2>Download Data<a class="headerlink" href="#download-data" title="Link to this heading">#</a></h2>
 <p>Metadata download <a class="reference external" href="https://www.kaggle.com/datasets/Cornell-University/arxiv?resource=download">here</a></p>
-<p>To download all the PDFs, use this command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gsutil<span class="w"> </span>-m<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>gs://arxiv-dataset/arxiv/arxiv<span class="w"> </span>.
+<p>To download PDFs, use this command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gsutil<span class="w"> </span>-m<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>gs://arxiv-dataset/arxiv/arxiv<span class="w"> </span>./pdf
 </pre></div>
 </div>
-<p>For more targeted downloads, you can pick a specific <a class="reference external" href="https://arxiv.org/category_taxonomy">topic</a>. This command downloads all computer science related papers:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gsutil<span class="w"> </span>-m<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>gs://arxiv-dataset/arxiv/cs/<span class="w"> </span>.
-</pre></div>
-</div>
+<p>This command will download papers from month \emph{01} of year \emph{(20)24}. I’ve found each month in recent years’s worth of data to contain on the order of 50GB of files. For this project, I’ve downloaded all PDFs starting from 2017, which is the year that the ``Attention is All You Need``` (\cite{vaswani_attention_2017}) paper arrived on the scene and introduced the Transfomer architecture.</p>
+<p>arXiv has a category taxonomy here <a class="reference external" href="https://arxiv.org/category_taxonomy">topic</a>.</p>
 </section>
 <section id="preprocess">
 <h2>Preprocess<a class="headerlink" href="#preprocess" title="Link to this heading">#</a></h2>

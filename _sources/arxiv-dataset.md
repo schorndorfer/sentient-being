@@ -5,17 +5,16 @@
 Metadata download [here](https://www.kaggle.com/datasets/Cornell-University/arxiv?resource=download)
 
 
-To download all the PDFs, use this command:
+To download PDFs, use this command:
 
 ```bash
-gsutil -m cp -r gs://arxiv-dataset/arxiv/arxiv .
+gsutil -m cp -r gs://arxiv-dataset/arxiv/arxiv ./pdf
 ```
 
-For more targeted downloads, you can pick a specific [topic](https://arxiv.org/category_taxonomy). This command downloads all computer science related papers:
+This command will download papers from month \emph{01} of year \emph{(20)24}. I've found each month in recent years's worth of data to contain on the order of 50GB of files. For this project, I've downloaded all PDFs starting from 2017, which is the year that the ``Attention is All You Need``` (\cite{vaswani_attention_2017}) paper arrived on the scene and introduced the Transfomer architecture.
 
-```bash
-gsutil -m cp -r gs://arxiv-dataset/arxiv/cs/ .
-```
+arXiv has a category taxonomy here [topic](https://arxiv.org/category_taxonomy). 
+
 
 ## Preprocess
 - Convert to parquet
