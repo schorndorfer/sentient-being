@@ -394,15 +394,16 @@ document.write(`
 <h2>Download Data<a class="headerlink" href="#download-data" title="Link to this heading">#</a></h2>
 <p>Metadata download <a class="reference external" href="https://www.kaggle.com/datasets/Cornell-University/arxiv?resource=download">here</a></p>
 <p>To download PDFs, use this command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gsutil<span class="w"> </span>-m<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>gs://arxiv-dataset/arxiv/arxiv<span class="w"> </span>./pdf
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gsutil<span class="w"> </span>-m<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>gs://arxiv-dataset/arxiv/arxiv/pdf/2401<span class="w"> </span>./pdf/
 </pre></div>
 </div>
-<p>This command will download papers from month \emph{01} of year \emph{(20)24}. I’ve found each month in recent years’s worth of data to contain on the order of 50GB of files. For this project, I’ve downloaded all PDFs starting from 2017, which is the year that the ``Attention is All You Need``` (\cite{vaswani_attention_2017}) paper arrived on the scene and introduced the Transfomer architecture.</p>
-<p>arXiv has a category taxonomy here <a class="reference external" href="https://arxiv.org/category_taxonomy">topic</a>.</p>
+<p>This command will download papers from year <em>(20)24</em> and month <em>01</em>. I downloaded all years from 2017-23, and found that each month contains on the order of 50GB of pdf files. For this project, I’ve chosen to start with 2017, because this is the year that Google researchers published the <em>Attention is All You Need</em> <span id="id1">[<a class="reference internal" href="transformers.html#id14" title="Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention Is All You Need. December 2017. arXiv:1706.03762 [cs]. URL: http://arxiv.org/abs/1706.03762 (visited on 2023-01-25).">VSP+17</a>]</span> paper, introducing the Transfomer architecture that has led to the explosion of <em>Large Language Models</em> we see today.</p>
 </section>
 <section id="preprocess">
 <h2>Preprocess<a class="headerlink" href="#preprocess" title="Link to this heading">#</a></h2>
 <ul class="simple">
+<li><p>arXiv has a category taxonomy here <a class="reference external" href="https://arxiv.org/category_taxonomy">topic</a>.</p></li>
+<li><p>Pull out relevant papers based on topic</p></li>
 <li><p>Convert to parquet</p></li>
 <li><p>Filter to subset</p></li>
 <li><p>Extract text</p></li>
